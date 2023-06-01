@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_app_flutter/pages/travel_page.dart';
 import '../widgets/app_large_text.dart';
 import '../widgets/app_text.dart';
+import '../widgets/bottom_navigator_bar_travel.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -20,51 +21,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: SizedBox(
-        height: 90,
-        child: BottomAppBar(
-          color: Colors.deepPurpleAccent,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.home,
-                  color: Colors.white,
-                  size: 32,
-                ),
-              ),
-              IconButton(
-                  icon: const Icon(
-                    Icons.airplanemode_active_rounded,
-                    color: Colors.white,
-                    size: 32,
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const TravelPage()));
-                  }),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.image_rounded,
-                  color: Colors.white,
-                  size: 32,
-                ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.person,
-                  color: Colors.white,
-                  size: 32,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: const BottomNavigatorBarTravel(),
       body: PageView.builder(
         scrollDirection: Axis.vertical,
         itemCount: images.length,
