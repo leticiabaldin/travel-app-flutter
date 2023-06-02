@@ -5,7 +5,6 @@ import 'package:travel_app_flutter/widgets/app_large_text.dart';
 
 import '../widgets/app_text.dart';
 import '../widgets/bottom_navigator_bar_travel.dart';
-import 'explorer_page.dart';
 
 class TravelPage extends StatefulWidget {
   const TravelPage({Key? key}) : super(key: key);
