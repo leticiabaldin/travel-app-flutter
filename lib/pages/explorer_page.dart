@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app_flutter/widgets/app_large_text.dart';
+import 'package:travel_app_flutter/widgets/card_travel.dart';
 
 import '../widgets/app_text.dart';
 import '../widgets/bottom_navigator_bar_travel.dart';
@@ -34,99 +35,37 @@ class _ExplorerPageState extends State<ExplorerPage> {
                         text: "Other Trips",
                         size: 30,
                       ),
-
                     ],
                   )
                 ],
               ),
               Expanded(
-                  child: ListView(
-                    padding: const EdgeInsets.only(top: 24),
-                children: [
-                  Card(
-                    margin: const EdgeInsets.only(bottom: 32),
-                    elevation: 8,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                    child: Column(
-                      children: [
-                         Container(
-                           margin: const EdgeInsets.only(top: 16),
-                          height: 360,
-                          child: Image(
-                            image: AssetImage("assets/images/trip1_image.png"),
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(
-                              vertical: 16, horizontal: 58),
-                          alignment: Alignment.bottomRight,
-                          child: const Text(
-                            'Paris | 05/06',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600
-                            ),
-                          ),
-                        ),
-                      ],
+                child: ListView(
+                  padding: const EdgeInsets.only(top: 24),
+                  children: const [
+                    CardTravel(
+                      titleCard: 'Paris | 06/06',
+                      imageCard: AssetImage("assets/images/trip1_image.png"),
                     ),
-                  ),
-                  Card(
-                    elevation: 8,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(top: 16),
-                          height: 360,
-                          child: const Image(
-                            image: AssetImage("assets/images/trip2_image.png"),
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(
-                              vertical: 16, horizontal: 58),
-                          alignment: Alignment.bottomRight,
-                          child: const Text(
-                            'Paris | 05/06',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600
-                            ),
-                          ),
-                        ),
-                      ],
+                    CardTravel(
+                      titleCard: 'Brasil | 07/09',
+                      imageCard: AssetImage(
+                        "assets/images/trip2_image.png",
+                      ),
                     ),
-                  ),
-                  Card(
-                    elevation: 8,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(top: 16),
-                          height: 360,
-                          child: Image(
-                            image: AssetImage("assets/images/trip1_image.png"),
-                          ),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(
-                              vertical: 16, horizontal: 58),
-                          alignment: Alignment.bottomRight,
-                          child: const Text(
-                            'Paris | 05/06',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600
-                            ),
-                          ),
-                        ),
-                      ],
+                    CardTravel(
+                      titleCard: 'New York | 23/07',
+                      imageCard: AssetImage(
+                        "assets/images/trip3_image.png",
+                      ),
                     ),
-                  )
-                ],
-              ),)
+                    CardTravel(
+                      titleCard: 'New Zealand | 09/04',
+                      imageCard: AssetImage("assets/images/trip4_image.png"),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ));

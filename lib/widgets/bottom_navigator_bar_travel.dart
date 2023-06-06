@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:travel_app_flutter/colors/travel_colors.dart';
 
 
 class BottomNavigatorBarTravel extends StatefulWidget {
@@ -14,9 +15,9 @@ class _BottomNavigatorBarTravelState extends State<BottomNavigatorBarTravel> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 90,
+      height: 100,
       child: BottomAppBar(
-        color: Colors.deepPurpleAccent,
+        color: AppTravelColors.pink,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
