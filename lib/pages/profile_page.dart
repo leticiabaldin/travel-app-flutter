@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app_flutter/colors/travel_colors.dart';
-import 'package:travel_app_flutter/pages/travel_page.dart';
-import 'package:travel_app_flutter/pages/welcome_page.dart';
 import 'package:travel_app_flutter/widgets/app_large_text.dart';
 
 import '../widgets/app_text.dart';

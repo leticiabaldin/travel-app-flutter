@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app_flutter/colors/travel_colors.dart';
 import 'package:travel_app_flutter/widgets/app_text.dart';
 
 class CardTravel extends StatelessWidget {
@@ -16,9 +17,24 @@ class CardTravel extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 32),
       elevation: 8,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
       child: Column(
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.favorite,
+                  size: 28,
+                  color: AppTravelColors.blueApp,
+                ),
+              ),
+            ],
+          ),
           Container(
             margin: const EdgeInsets.only(top: 16),
             height: 360,

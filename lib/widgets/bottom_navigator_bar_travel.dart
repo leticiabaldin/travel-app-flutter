@@ -17,7 +17,7 @@ class _BottomNavigatorBarTravelState extends State<BottomNavigatorBarTravel> {
     return SizedBox(
       height: 100,
       child: BottomAppBar(
-        color: AppTravelColors.pink,
+        color: AppTravelColors.blueApp,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

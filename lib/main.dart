@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travel_app_flutter/pages/explorer_page.dart';
+import 'package:travel_app_flutter/pages/home_page.dart';
+import 'package:travel_app_flutter/pages/login_page.dart';
 import 'package:travel_app_flutter/pages/profile_page.dart';
 import 'package:travel_app_flutter/pages/travel_page.dart';
 import 'package:travel_app_flutter/pages/welcome_page.dart';
@@ -17,6 +19,17 @@ final GoRouter _router = GoRouter(
         return const WelcomePage();
       },
       routes: <RouteBase>[
+        GoRoute(
+          path: 'home',
+          builder: (BuildContext context, GoRouterState state) {
+            return const HomePage();
+          },
+        ),GoRoute(
+          path: 'login',
+          builder: (BuildContext context, GoRouterState state) {
+            return const LoginPage();
+          },
+        ),
         GoRoute(
           path: 'travel',
           builder: (BuildContext context, GoRouterState state) {
@@ -50,10 +63,12 @@ class MyApp extends StatelessWidget {
       routerConfig: _router,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue).copyWith(background: const Color(0XFFFFFFFF)),
+        colorScheme:
+            ColorScheme.fromSwatch(primarySwatch: Colors.blue).copyWith(
+          background: const Color(0XFFFFFFFF),
+        ),
       ),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
